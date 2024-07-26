@@ -25,30 +25,50 @@ class Langugeselectingscreen extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 35),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Set your favorite language',
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                    ],
+                  ),
+                ),
                 height: 309,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     border: Border(
                       left: BorderSide(
-                        color: Colors.black, // Change the color as needed
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black, // Change the color as needed
                         width: .5, // Change the width as needed
                       ),
                       right: BorderSide(
-                        color: Colors.black, // Change the color as needed
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black, // Change the color as needed
                         width: .5, // Change the width as needed
                       ),
                       top: BorderSide(
-                        color: Colors.black, // Change the color as needed
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black, // Change the color as needed
                         width: .5, // Change the width as needed
                       ),
                       // No bottom border
                     ),
-                    color: HexColor('#F7F7F7'),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? Colors.grey[900]
+                        : Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30))),
               ),
-            )
+            ),
           ],
         ),
       ),

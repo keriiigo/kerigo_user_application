@@ -8,8 +8,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(scaffoldBackgroundColor: HexColor('#F7F7F7')),
+      theme: ThemeData(
+        scaffoldBackgroundColor: HexColor('#F7F7F7'),
+        fontFamily: 'Satoshi',
+        brightness: Brightness.light,
+        textTheme: TextTheme(
+            bodyLarge: TextStyle(color: Colors.black),
+            bodySmall: TextStyle(color: Colors.black)),
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: TextTheme(
+          bodyLarge:
+              TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+          bodySmall: TextStyle(color: Colors.white),
+        ),
+      ),
       home: Langugeselectingscreen(),
+      themeMode: ThemeMode.system,
     );
   }
 }
