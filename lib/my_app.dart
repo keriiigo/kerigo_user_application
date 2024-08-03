@@ -8,21 +8,33 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: HexColor('#F7F7F7'),
-        fontFamily: 'Satoshi',
+        fontFamily: 'Satoshi-Medium',
         brightness: Brightness.light,
         textTheme: const TextTheme(
-            bodyLarge: TextStyle(color: Colors.black),
-            bodySmall: TextStyle(color: Colors.black)),
+            bodyLarge: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'Satoshi-Medium'),
+            bodySmall: TextStyle(
+                fontFamily: 'Satoshi-Medium',
+                color: Colors.black,
+                fontWeight: FontWeight.normal)),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scaffoldBackgroundColor: Colors.black,
         textTheme: const TextTheme(
-          bodyLarge:
-              TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
-          bodySmall: TextStyle(color: Colors.white),
+          bodyLarge: TextStyle(
+              fontFamily: 'Satoshi300',
+              color: Colors.white,
+              fontWeight: FontWeight.w700),
+          bodySmall: TextStyle(
+              fontFamily: 'Satoshi-Light',
+              color: Colors.white,
+              fontWeight: FontWeight.w400),
         ),
       ),
       home: const Langugeselectingscreen(),
