@@ -96,7 +96,7 @@ class Loginscreen extends StatelessWidget {
               text: 'Continue',
               ontap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => PersonalInfo()));
+                    MaterialPageRoute(builder: (context) => Otppage()));
               },
             )
           ],
