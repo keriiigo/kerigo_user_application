@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:kerigo_user_app/model/const_sizes.dart';
+import 'package:kerigo_user_app/view/otppage/otppage.dart';
+import 'package:kerigo_user_app/view/personal_info/personal_info.dart';
 import 'package:kerigo_user_app/view/widgets/custom_botton.dart';
 
 class Loginscreen extends StatelessWidget {
@@ -90,7 +92,13 @@ class Loginscreen extends StatelessWidget {
               ),
             ),
             hight30,
-            CostomeElevatedButton(text: 'Continue')
+            CostomeElevatedButton(
+              text: 'Continue',
+              ontap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => PersonalInfo()));
+              },
+            )
           ],
         ),
       ),
